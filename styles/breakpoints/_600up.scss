@@ -1,0 +1,127 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+.font-sm {
+	font-size: 14px;
+}
+
+.font-md {
+	font-size: 16px;
+}
+
+.font-lr {
+	font-size: 32px;
+}
+
+.font-lg {
+	font-size: 96px;
+}
+
+.content-width {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1070px;
+}
+
+.header {
+	&__nav {
+		display: none;
+	}
+}
+
+.firstview {
+	&__image {
+		&::before {
+			font-size: 50px;
+		}
+	}
+}
+
+.about {
+	&__content {
+		position: relative;
+		&::before {
+			content: "";
+			width: 70%;
+			height: 70%;
+			position: absolute;
+			top: 30%;
+			right: 0;
+			z-index: -1;
+			background-color: rgba(252, 216, 194, 0.69);
+		}
+	}
+	&__image {
+		width: 70%;
+		height: 70%;
+	}
+}
+
+.works {
+	&__btn {
+		font-size: 30px;
+	}
+}
+
+.skills {
+	&__contents {
+		&::before {
+			top: 10%;
+		}
+	}
+	&__inner {
+		flex-direction: row;
+	}
+
+	&__contents-inner {
+		width: 45%;
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	text-align: left;
+
+	&__ul-1 {
+		display: flex;
+		& .footer__li {
+			padding: 0 20px 0 0 !important;
+		}
+	}
+
+	&__ul-2 {
+		padding-bottom: 0 !important;
+	}
+}
+
+//以下works.htmlのスタイル
+
+.works-page {
+	.works {
+		&__contents-inner {
+			width: 45%;
+		}
+
+		&__image {
+			height: 300px;
+		}
+	}
+
+	& .footer {
+		& .footer__ul-1 {
+			padding: 0 !important;
+			display: block;
+			& .footer__li {
+				padding: 0 !important;
+				& a {
+					display: block;
+				}
+			}
+		}
+	}
+}
